@@ -1,0 +1,28 @@
+#page-footer {
+    background-color: #a993bf;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 4px solid;
+    color: #fff;
+}
+
+.footer-logo {
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.disclaimer {
+    font-size: small;
+}
+
+.social-media:hover,
+.social-media {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.no-padding {
+    padding: 0px 0px 0px 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}

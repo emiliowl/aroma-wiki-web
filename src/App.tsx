@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Security, SecureRoute, LoginCallback } from "@okta/okta-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+
+import Config from "./config";
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
+import Succeed from "./pages/Registration/Succeed";
+import Catalog from "./pages/Catalog";
+
+const CALLBACK_PATH = "/implicit/callback";
+
+const App = () => (
+  <Router>
+    <Suspense
+      fallback={
+        <div className="suspence text-center">
+          <span>carregando...</span>
+        </div>
+      }
+    >
+      <Switch>
+        <Security {...Config.oidc}>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/registration" component={Registration} />
+          <Route exact path="/succeed" component={Succeed} />
+          <Route path={CALLBACK_PATH} component={LoginCallback} />
+
+          <SecureRoute exact path="/catalog" component={Catalog} />
+        </Security>
+      </Switch>
+    </Suspense>
+  </Router>
+);
 
 export default App;

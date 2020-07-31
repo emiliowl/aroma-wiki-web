@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.btn.aset-action {
+  background-color: #743B8C;
+  border-color: #743B8C;
+}
+
+.btn.aset-action.disabled {
+  background-color: #977bd0;
+  border-color: #977bd0;
+}
+
+.btn.aset-action.disabled:hover {
+  background-color: #977bd0;
+  border-color: #977bd0;
+}
+
+.btn.aset-action.disabled:active {
+  background-color: #743B8C;
+  border-color: #743B8C;
+}

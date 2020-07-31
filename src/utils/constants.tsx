@@ -9,7 +9,7 @@ export const getIssuer = ():string => {
 
 export const getCallbackPath = ():string => {
     if(process.env.NODE_ENV === 'development') return "http://localhost:3000/implicit/callback";
-    return "http://aroma-wiki-web.herokuapp.com/implicit/callback";
+    return "https://aroma-wiki-web.herokuapp.com/implicit/callback";
 }
 
 export const getApiUrl = (path: string): string => {

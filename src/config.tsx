@@ -1,5 +1,5 @@
-const CLIENT_ID: string = "0oan5z95vBOTMeI2h4x6";
-const ISSUER: string = "https://auth.asetterapias.com.br/oauth2/aset/";
+import { getApiUrl, getClientId, getIssuer, getCallbackPath } from './utils/constants'
+
 const OKTA_TESTING_DISABLEHTTPSCHECK: string = "true";
 
 export interface OidcConfig {
@@ -22,15 +22,15 @@ export interface OktaConfig {
 
 const oktaConfig: OktaConfig = {
   oidc: {
-    clientId: CLIENT_ID,
-    issuer: ISSUER,
-    redirectUri: "http://localhost:3000/implicit/callback",
+    clientId: getClientId(),
+    issuer: getIssuer(),
+    redirectUri: getCallbackPath(),
     scopes: ["openid", "profile", "email"],
     pkce: true,
     disableHttpsCheck: OKTA_TESTING_DISABLEHTTPSCHECK,
   },
   resourceServer: {
-    messagesUrl: "http://localhost:5000/api/messages",
+    messagesUrl: `${getApiUrl("/")}/api/scents`,
   },
 };
 

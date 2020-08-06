@@ -12,6 +12,7 @@ import Table from "react-bootstrap/Table";
 
 import MenuBar from "../../common/Header";
 import Footer from "../../common/Footer";
+import CardPicture from "../../common/CardPicture";
 
 import { getApiUrl } from "../../utils/constants";
 
@@ -66,7 +67,7 @@ const Catalog: FunctionComponent = () => {
             return (
               <Col xs={12} sm={6} md={4}>
                 <Card>
-                  <Card.Img variant="top" src={el.picture} />
+                  <CardPicture pictureId={el.name}/>
                   <Card.Body>
                     <Card.Title>{el.name}</Card.Title>
                     <Card.Text as="div">

@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Nav from "react-bootstrap/Nav";
@@ -11,7 +10,9 @@ import Row from "react-bootstrap/Row";
 import MenuBar from "../../common/Header";
 import Footer from "../../common/Footer";
 
-import aromaImg from "../../img/aroma-1.jpg";
+import logoAroma from '../../img/aset-5.png';
+import logoAromaMobile from '../../img/aset-5.mobile.jpeg';
+
 
 const Home: FunctionComponent = () => (
   <div>
@@ -19,7 +20,7 @@ const Home: FunctionComponent = () => (
     <Jumbotron>
       <h1>Seja bem vindo ao aroma-wiki da Aset Terapias!</h1>
       <p>
-        Aqui voc&ecirc; vai encontrar dados detalhados sobre o aromaterapia...
+        Aqui voc&ecirc; vai encontrar a ficha t&eacute;cnica dos principais &oacute;leos essenciais.
       </p>
       <p>
         <Nav.Link href="/registration">
@@ -29,45 +30,21 @@ const Home: FunctionComponent = () => (
     </Jumbotron>
     <Container>
       <Row>
-        <Col xs={12} sm={6} md={4}>
-          <Card>
-            <Card.Img variant="top" src={aromaImg} />
-            <Card.Body>
-              <Card.Title>Dica do dia</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button className="aset-action">Ler mais...</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={4}>
-          <Card>
-            <Card.Img variant="top" src={aromaImg} />
-            <Card.Body>
-              <Card.Title>Mais Procurado</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button className="aset-action">Ler mais...</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={4}>
-          <Card>
-            <Card.Img variant="top" src={aromaImg} />
-            <Card.Body>
-              <Card.Title>Sugestão do Ciclo</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button className="aset-action">Ler mais...</Button>
-            </Card.Body>
-          </Card>
-        </Col>
+        <Carousel>
+          <Carousel.Item>
+            <a href="http://asetterapias.com.br/jornada_aromatica_w01/" 
+                       className="no-padding no-color" 
+                       rel="noopener noreferrer"
+                        target="_blank" >
+              <img className="d-none d-md-block w-100"
+                  src={logoAroma}
+                  alt="Jornada Aromática" />
+              <img className="d-block d-md-none w-100"
+                  src={logoAromaMobile}
+                  alt="Jornada Aromática" />
+                  </a>
+          </Carousel.Item>
+        </Carousel>
       </Row>
     </Container>
     <Footer />

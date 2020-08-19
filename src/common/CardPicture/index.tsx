@@ -8,6 +8,7 @@ import capimImg from "../../img/scent-pictures/capim-limao.jpg";
 import cedroImg from "../../img/scent-pictures/cedro-atlas.jpg";
 import cipestreImg from "../../img/scent-pictures/cipreste.jpg";
 import citronelaImg from "../../img/scent-pictures/citronela.jpg";
+import copaibaImg from "../../img/scent-pictures/copaiba.jpg";
 import cravoImg from "../../img/scent-pictures/cravo-india.jpg";
 import eucaliptoImg from "../../img/scent-pictures/eucalipto.jpg";
 import ervaImg from "../../img/scent-pictures/erva-doce.jpg";
@@ -43,6 +44,7 @@ const knownPictures :Record<string, string> = {
     "Cedro-do-Atlas": cedroImg,
     "Cipreste": cipestreImg,
     "Citronela": citronelaImg,
+    "Copaíba": copaibaImg,
     "Cravo-da-índia": cravoImg,
     "Erva-Doce": ervaImg,
     "Eucalipto-glóbulus": eucaliptoImg,

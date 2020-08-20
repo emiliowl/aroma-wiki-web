@@ -23,9 +23,9 @@ const Home: FunctionComponent = () => (
         Aqui voc&ecirc; vai encontrar a ficha t&eacute;cnica dos principais &oacute;leos essenciais.
       </p>
       <p>
-        <Nav.Link href="/registration">
+        {/* <Nav.Link href="/registration">
           <Button className="aset-action">Quero me inscrever!</Button>
-        </Nav.Link>
+        </Nav.Link> */}
       </p>
     </Jumbotron>
     <Container>

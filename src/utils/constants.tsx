@@ -4,7 +4,7 @@ export const getClientId = ():string => {
 };
 export const getIssuer = ():string => {
     if(process.env.NODE_ENV === 'development') return "https://dev-250545.okta.com/oauth2/aset/";
-    return "https://dev-250545-admin.okta.com/oauth2/aset/";
+    return "https://dev-250545.okta.com/oauth2/aset/";
 }
 
 export const getCallbackPath = ():string => {

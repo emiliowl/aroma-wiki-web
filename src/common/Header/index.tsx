@@ -14,7 +14,7 @@ const MenuBar: FunctionComponent = () => {
   const { authState } = useOktaAuth();
   return (
     <Navbar className="aset-lightpurple-bg" variant="dark" expand="lg">
-      <Navbar.Brand href="/">
+      <Navbar.Brand href={process.env.REACT_APP_ASETWEBSITE_URL}>
         <img src={logoAset} alt="aset terapias logomark" width="100px" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
